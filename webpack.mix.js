@@ -18,9 +18,5 @@ const tailwindcss = require('tailwindcss');
   .copy('src/index.html', 'build')
 	.options({
 		processCssUrls: false,
-    postCss: [tailwindcss('./tailwind.config.js')],
-    hmrOptions: {
-      host: 'moutains.test',
-      port: 8080
-    }
-  });
+    postCss: [tailwindcss('./tailwind.config.js')]
+  }).browserSync({proxy: 'http://mountains.test'});

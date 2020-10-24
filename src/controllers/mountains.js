@@ -20,7 +20,7 @@ export class Mountains {
   // Instancie le plugin
   init = () => {
     console.log(this.settings)
-    this.enqueue_scripts();
+    //this.enqueue_scripts();
   }
 
 

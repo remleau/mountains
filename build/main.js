@@ -126,9 +126,7 @@ var Mountains = /*#__PURE__*/function () {
     _classCallCheck(this, Mountains);
 
     this.init = function () {
-      console.log(_this.settings);
-
-      _this.enqueue_scripts();
+      console.log(_this.settings); //this.enqueue_scripts();
     };
 
     this.enqueue_scripts = function () {
@@ -194,8 +192,8 @@ document.addEventListener("DOMContentLoaded", function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Remyg\Desktop\Remleau_projets_web\mountains\src\main.js */"./src/main.js");
-module.exports = __webpack_require__(/*! C:\Users\Remyg\Desktop\Remleau_projets_web\mountains\src\assets\styles\main.scss */"./src/assets/styles/main.scss");
+__webpack_require__(/*! /Users/remygroleau/Documents/dev/remleau/mountains/src/main.js */"./src/main.js");
+module.exports = __webpack_require__(/*! /Users/remygroleau/Documents/dev/remleau/mountains/src/assets/styles/main.scss */"./src/assets/styles/main.scss");
 
 
 /***/ })

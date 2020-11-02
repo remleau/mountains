@@ -17,11 +17,21 @@ module.exports = {
 
       red: '#EE1948',
 
+      blue: '#0083C9',
+      blueHover: '#005798',
+      darkBlue: '#6A6981',
+
       noir: '#0D0D0D',
 
-      lightGrey: '#EFEFEF',
-      darkGrey: '#383637',
+      darkGrey: '#1A1936',
 
+      mediumGrey: '#68686A',
+      mediumGreyHover: '#818184',
+      
+      lightGrey: '#626363',
+      lightGreyHover: '#D3D3D3',
+
+      lighterGrey: '#F5F5F5',
     },
     spacing: {
       px: '1px',
@@ -149,12 +159,12 @@ module.exports = {
       lg: '1.125rem', //18px
       xl: '1.25rem', //20px
       '2xl': '1.5rem', //24px
-      '2.25xl': '1.625rem', //26px
+      '2.25xl': '1.625rem',
       '2.5xl': '1.75rem', //28px
       '3xl': '1.875rem', //30px
-      '4xl': '2.25rem', //36px
+      '4xl': '2.25rem',
       '5xl': '3rem', //48px
-      '6xl': '4rem', //64px
+      '6xl': '4rem',
       '7xl': '5rem', //80px
     },
     fontWeight: {
@@ -509,9 +519,5 @@ module.exports = {
   plugins: [],
   purge: {
     enabled: false,
-  },
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-  },
+  }
 }

@@ -1,7 +1,11 @@
-export default function Footer() {
+import { withTranslation } from '../i18n';
+
+function Footer({ t }) {
   return (
     <footer>
-      footer
+      {t('description')}
     </footer>
   )
 }
+
+export default withTranslation('footer')(Footer)

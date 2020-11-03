@@ -5,8 +5,8 @@ import Footer from './footer.js';
 
 export default function Layout({
   children,
-  title = 'Moutains',
-  description = 'This is the description',
+  title,
+  description
 }) {
   return (
     <React.Fragment>
@@ -18,10 +18,12 @@ export default function Layout({
       </Head>
 
       <Header />
+      
+      <div className="wrapper">
+        {children}
+        <Footer />
+      </div>
 
-      {children}
-
-      <Footer />
     </React.Fragment>
   )
 }

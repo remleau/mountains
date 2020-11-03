@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Your own custom utilities */
+#__next {
+  @apply h-screen;
+  @apply flex;
+}
+
+.wrapper {
+  @apply w-full;
+}
+
+header {
+  @apply w-1/6;
+}

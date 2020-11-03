@@ -1,9 +1,16 @@
 import Layout from '../../components/layout.js';
+import { withTranslation } from '../../i18n';
 
-export default function About() {
+function About({ t }) {
   return (
-    <Layout title="About | Mountains app">
+    <Layout title={t('title')} description={t('description')}>
       bro about
     </Layout>
   )
 }
+
+About.getInitialProps = async () => ({
+  namespacesRequired: ['common', 'footer'],
+});
+
+export default withTranslation('common')(About)

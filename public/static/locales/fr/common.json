@@ -1,4 +1,7 @@
 {
   "page_title": " | Montagne app",
-  "page_description": "Description en fr"
+  "page_description": "Description en fr",
+  "change_locale": "Langue",
+  "locale_fr": "Français",
+  "locale_en": "Anglais"
 }

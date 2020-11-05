@@ -17,21 +17,17 @@ module.exports = {
 
       red: '#EE1948',
 
-      blue: '#0083C9',
-      blueHover: '#005798',
-      darkBlue: '#6A6981',
+      yellow: '#DAC087',
+
+      blue: '#3C96C8',
 
       noir: '#0D0D0D',
-
-      darkGrey: '#1A1936',
-
-      mediumGrey: '#68686A',
-      mediumGreyHover: '#818184',
       
-      lightGrey: '#626363',
-      lightGreyHover: '#D3D3D3',
+      lightGrey: '#FFFBFE',
+      lighterGrey: '#F7F7F7',
 
-      lighterGrey: '#F5F5F5',
+      mediumGrey: '#626061',
+
     },
     spacing: {
       px: '1px',

@@ -3,8 +3,9 @@ import { withTranslation } from '../../i18n';
 
 function About({ t }) {
   return (
-    <Layout title={t('title')} description={t('description')}>
-      about
+    <Layout>
+      <h1>About app</h1>
+
     </Layout>
   )
 }

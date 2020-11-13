@@ -1,0 +1,18 @@
+.search-bar {
+  @apply flex items-end;
+  @apply outline-none;
+
+  input {
+    @apply w-full mr-4 pr-2 py-2;
+    @apply bg-transparent;
+    @apply border-b border-lightGrey2 outline-none;
+  }
+
+  button {
+    @apply outline-none py-3 px-3;
+
+    svg {
+      width: 17px;
+    }
+  }
+}

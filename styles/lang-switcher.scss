@@ -1,0 +1,37 @@
+.lang-switcher {
+  @apply pt-4 px-4;
+
+  .flag {
+    @apply flex items-center;
+    @apply pb-2;
+    @apply text-mediumGrey;
+
+    svg {
+      width: 17px;
+      margin-right: 10px;
+    }
+  }
+
+  .buttons {
+    button {
+      @apply py-1 px-3 mr-2 mb-2 rounded-md;
+      @apply outline-none bg-lightGrey shadow;
+
+      span {
+        @apply text-sm text-mediumGrey;
+      }
+
+      &:last-child {
+        @apply mr-0;
+      }
+
+      &.actif {
+        @apply bg-yellow;
+
+        span {
+          @apply text-lightGrey;
+        }
+      }
+    }
+  }
+}

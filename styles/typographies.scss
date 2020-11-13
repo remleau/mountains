@@ -1,0 +1,38 @@
+h1 {
+  @apply font-serif font-semibold text-mediumGrey;
+  font-size: 1.75rem;
+
+  @screen lg {
+    font-size: 4.5rem;
+  }
+}
+
+h2 {
+  @apply font-sans font-bold text-mediumGrey;
+  @apply relative flex items-center;
+  font-size: 1.5rem;
+
+  @screen lg {
+    font-size: 2.25rem;
+  }
+}
+
+h3 {
+  @apply font-sans font-medium text-mediumGrey;
+  @apply relative flex items-center;
+  font-size: 1.75rem;
+}
+
+h4 {
+  @apply font-sans font-normal text-mediumGrey;
+  font-size: 1.313rem;
+}
+
+p {
+  @apply text-lightGrey pb-3;
+  line-height: 1.625rem;
+
+  &:last-of-type {
+    @apply pb-0;
+  }
+}

@@ -1,10 +1,12 @@
 @tailwind base;
 @tailwind components;
 
+@import './typographies.scss';
 @import './header.scss';
+@import './cards.scss';
 @import './lang-switcher.scss';
 @import './search-bar.scss';
-@import './typographies.scss';
+@import './footer.scss';
 
 @tailwind utilities;
 
@@ -15,7 +17,8 @@
 }
 
 .wrapper {
-  @apply w-full;
+  @apply w-4/5 h-full;
+  @apply absolute right-0;
 }
 
 .sub-wrapper {

@@ -3,7 +3,7 @@ import { withTranslation } from '../i18n';
 function Footer({ t }) {
   return (
     <footer>
-      {t('description')}
+      <p>Copyright</p>
     </footer>
   )
 }

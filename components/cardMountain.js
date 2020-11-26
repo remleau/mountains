@@ -1,13 +1,28 @@
 import React from "react";
-import { withTranslation } from '../i18n';
+import { withTranslation, Link } from '../i18n';
 
 function CardMountain(props, { t }) {
-  const {title} = props.data;
+  const {title, excerpt, image, link} = props.data;
 
   return (
-    <div>
-      {title}
-    </div>
+    <Link href={link}>
+      <div className="card card-mountain">
+
+        <div className="container-image">
+          <div className="image" style={{backgroundImage: "url("+ image +")"}}></div>
+        </div>
+
+        <div className="container-infos">
+          <div className="title">
+            {title}
+          </div>
+          <div className="excerpt">
+            {excerpt}
+          </div>
+        </div>
+
+      </div>
+    </Link>
   )
 }
 

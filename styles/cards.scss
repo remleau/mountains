@@ -1,0 +1,41 @@
+.cards {
+  @apply flex flex-wrap;
+  margin: 0 -1%;
+}
+
+
+.card {
+  @apply cursor-pointer overflow-hidden;
+
+  .container-image {
+    height: 350px;
+    
+    .image {
+      @apply w-full h-full;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  .container-infos {
+    @apply p-4;
+
+    .title {
+      @apply pt-2 pb-6;
+      @apply font-bold text-lg;
+    }
+  }
+
+  
+
+  &-mountain {
+    @apply inline-block;
+    @apply rounded-lg shadow;
+    width: 23%;
+    margin: 1%;
+
+    .container-image {
+      height: 325px;
+    }
+  }
+}

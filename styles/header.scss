@@ -59,7 +59,7 @@ header {
 
 .sub-header {
   @apply py-6 px-12;
-  @apply bg-lightGrey border-b border-yellow;
+  @apply bg-lighterGrey border-b border-yellow;
   @apply flex items-center justify-between;
   height: 85px;
 
@@ -67,13 +67,21 @@ header {
     @apply flex items-center;
     @apply text-mediumGrey;
 
+    a {
+      @apply mr-3;
+
+      &:last-of-type {
+        @apply mr-0;
+      }
+    }
+
     span {
       @apply font-bold text-lg;
     }
 
     svg {
+      @apply mr-3;
       width: 17px;
-      margin-left: 20px;
     }
   }
 }

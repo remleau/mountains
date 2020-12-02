@@ -1,0 +1,10 @@
+.block__modal {
+  @apply absolute h-full w-full left-0 top-0;
+  @apply bg-white;
+  @apply py-6 px-12;
+
+  > div {
+    @apply flex items-center justify-between;
+    @apply pb-4;
+  }
+}

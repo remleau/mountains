@@ -7,6 +7,8 @@
 @import './lang-switcher.scss';
 @import './search-bar.scss';
 @import './footer.scss';
+@import './toggleViews.scss';
+@import './modal.scss';
 
 @tailwind utilities;
 
@@ -22,11 +24,44 @@
 }
 
 .sub-wrapper {
+  @apply relative;
   @apply py-6 px-12;
 }
 
 .cta {
-  @apply flex items-center;
+  @apply flex items-center outline-none;
   @apply py-2 px-6 rounded-md shadow;
   @apply text-sm text-white bg-yellow outline-none;
+
+  &.add {
+    @apply px-3 bg-blue;
+
+    span + svg {
+      @apply ml-3;
+    }
+
+    svg {
+      width: 20px;
+    }
+  }
+
+  &.close {
+    @apply px-3 bg-blue;
+
+    span + svg {
+      @apply ml-3;
+    }
+
+    svg {
+      width: 20px;
+    }
+  }
+}
+
+.title {
+  @apply flex items-center justify-between;
+
+  h1 {
+    line-height: 1em;
+  }
 }

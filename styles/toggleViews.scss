@@ -1,0 +1,41 @@
+.toggleViews {
+  @apply flex items-center justify-end;
+  @apply pt-8;
+
+  > div {
+    @apply flex items-center;
+    @apply bg-lighterGrey;
+    @apply py-3 px-4;
+  }
+
+  .actions {
+    @apply flex;
+    @apply rounded-md;
+  }
+
+  p {
+    @apply text-mediumGrey text-xs uppercase italic;
+    @apply mr-6;
+  }
+
+  button {
+    @apply ml-4 p-2 rounded-md outline-none;
+
+    svg {
+      @apply text-mediumGrey;
+      width: 20px;
+    }
+
+    &:first-child {
+      @apply ml-0;
+    }
+
+    &.actif {
+      @apply bg-blue;
+
+      svg {
+        @apply text-white;
+      }
+    }
+  }
+}

@@ -9,6 +9,7 @@
 @import './footer.scss';
 @import './toggleViews.scss';
 @import './modal.scss';
+@import './errors.scss';
 
 @tailwind utilities;
 
@@ -63,5 +64,36 @@
 
   h1 {
     line-height: 1em;
+  }
+}
+
+table {
+  @apply my-4 w-full shadow;
+
+  thead {
+    @apply bg-lightGrey;
+    
+    th {
+      @apply table-row;
+      @apply p-4;
+    }
+
+    td {
+      @apply text-left;
+
+      p {
+        @apply text-sm uppercase;
+
+        &:last-of-type {
+          @apply p-4;
+        }
+      }
+    }
+  }
+
+  tbody {
+    td {
+      @apply p-4;
+    }
   }
 }

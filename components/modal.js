@@ -1,7 +1,6 @@
 import React from "react";
 
 const Modal = (props) => {
-
   const { title } = props;
 
   const setModalVisibility = () => {
@@ -13,13 +12,11 @@ const Modal = (props) => {
 
       <div className="flex items-center justify-between pb-4">
 
-        {
-          title ?
-            <div className="title">
-              <h1>{title}</h1>
-            </div>
-          : ''
-        }
+        {title ?
+          <div className="title">
+            <h1>{title}</h1>
+          </div>
+        : ''}
 
         <button onClick={() => setModalVisibility()} className="cta close">
           <span>Fermer</span>
@@ -30,7 +27,7 @@ const Modal = (props) => {
 
       </div>
 
-      {props.children}
+      <div>{props.children}</div>
 
     </section>
   );

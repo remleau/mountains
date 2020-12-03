@@ -1,6 +1,5 @@
 // important stuff
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
 
 // traduction
 import { withTranslation } from '../i18n';
@@ -8,14 +7,12 @@ import { withTranslation } from '../i18n';
 // components
 import Layout from '../components/layout.js';
 import SubHeader from '../components/sub-header.js';
-import CardMountain from '../components/cardMountain.js';
-import ToggleViews from '../components/toggleViews.js';
 import Modal from '../components/modal.js';
+import Mountains from '../components/mountains.js';
+import FormAddMountain from '../components/formAddMountain.js';
 
 // page component
 const Home = ({ t }) => {
-  const { mountains, isFetching } = useSelector((state) => state.mountains);
-  const [view, setView] = useState('cards');
   const [modalAdd, setModalAdd] = useState(false);
 
   const meta = {
@@ -28,9 +25,8 @@ const Home = ({ t }) => {
     <Layout meta={meta}>
 
       <Modal visibility={modalAdd} controlVisibility={setModalAdd} title="Ajouter une montagne">
-        allo
+        <FormAddMountain popUpVisibility={setModalAdd} />
       </Modal>
-
 
       <div className="title">
         <h1>Mes montagnes</h1>
@@ -42,16 +38,7 @@ const Home = ({ t }) => {
         </button>
       </div>
 
-      <ToggleViews view={setView} actif={view} title="Changer votre affichage" />
-
-      <div className="cards">
-        {view == 'cards' ? 
-          Object.keys(mountains).map(function (key) {
-            return <CardMountain key={key} data={mountains[key]} />
-          }) :
-          'ALLO'
-        }
-      </div>
+      <Mountains />
 
     </Layout>
   )

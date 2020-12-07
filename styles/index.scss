@@ -25,14 +25,15 @@
 }
 
 .sub-wrapper {
-  @apply relative;
+  @apply relative bg-lightGrey;
   @apply py-6 px-12;
+  min-height: 100%;
 }
 
 .cta {
   @apply flex items-center outline-none;
   @apply py-2 px-6 rounded-md shadow;
-  @apply text-sm text-white bg-yellow outline-none;
+  @apply text-sm text-white bg-blue outline-none;
 
   &.add {
     @apply px-3 bg-blue;

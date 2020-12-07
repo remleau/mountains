@@ -15,19 +15,20 @@ module.exports = {
       black: '#000',
       white: '#fff',
 
-      red: '#EE1948',
+      red: '#cc4f4b',
 
-      yellow: '#DAC087',
+      yellow: '#c08330',
 
       blue: '#3C96C8',
 
       noir: '#0D0D0D',
       
-      lightGrey: '#FFFBFE',
-      lightGrey2: '#E5E4E5',
-      lighterGrey: '#F7F7F7',
+      lightGrey: '#F9F9F9',
+      lightGrey2: '#E7E5E1',
+      lighterGrey: '#f2f2f2',
 
-      mediumGrey: '#626061',
+      mediumGrey: '#9d999a',
+      darkGrey: '#38353d',
 
     },
     spacing: {

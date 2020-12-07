@@ -22,13 +22,13 @@
 
     .title {
       @apply pt-2 pb-6;
-      @apply font-bold text-lg;
+      @apply font-bold text-lg text-darkGrey;
     }
   }
 
-  
 
   &-mountain {
+    @apply bg-lightGrey;
     @apply inline-block;
     @apply rounded-lg shadow;
     width: 23%;

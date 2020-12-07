@@ -3,9 +3,14 @@
   @apply outline-none;
 
   input {
-    @apply w-full mr-4 pr-2 py-2;
+    @apply mr-4 pr-2 py-2;
     @apply bg-transparent;
-    @apply border-b border-lightGrey2 outline-none;
+    @apply border-b border-mediumGrey outline-none;
+    width: 225px;
+
+    &.error {
+      @apply border-red;
+    }
   }
 
   button {

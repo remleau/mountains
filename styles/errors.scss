@@ -1,0 +1,12 @@
+.block__errors {
+  @apply bg-red rounded;
+  @apply mt-4 py-3 px-4;
+
+  > * {
+    @apply text-white;
+  }
+
+  p {
+    @apply text-sm;
+  }
+}

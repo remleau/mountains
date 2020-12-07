@@ -1,5 +1,5 @@
 .lang-switcher {
-  @apply pt-4 px-4;
+  @apply px-8 pt-4;
 
   .flag {
     @apply flex items-center;
@@ -26,7 +26,7 @@
       }
 
       &.actif {
-        @apply bg-yellow;
+        @apply bg-blue;
 
         span {
           @apply text-lightGrey;

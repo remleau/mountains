@@ -1,5 +1,5 @@
 h1 {
-  @apply font-serif font-semibold text-mediumGrey;
+  @apply font-serif font-semibold text-darkGrey;
   font-size: 1.75rem;
 
   @screen lg {
@@ -8,7 +8,7 @@ h1 {
 }
 
 h2 {
-  @apply font-sans font-bold text-mediumGrey;
+  @apply font-sans font-bold text-darkGrey;
   @apply relative flex items-center;
   font-size: 1.5rem;
 
@@ -18,13 +18,13 @@ h2 {
 }
 
 h3 {
-  @apply font-sans font-medium text-mediumGrey;
+  @apply font-sans font-medium text-darkGrey;
   @apply relative flex items-center;
   font-size: 1.75rem;
 }
 
 h4 {
-  @apply font-sans font-normal text-mediumGrey;
+  @apply font-sans font-normal text-darkGrey;
   font-size: 1.313rem;
 }
 

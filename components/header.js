@@ -1,7 +1,10 @@
 import { Link } from '../i18n';
 import Switcher from './lang-switcher';
+import { useRouter } from 'next/router';
 
 export default function Header() {
+  const router = useRouter();
+
   return (
     <header>
       <div className="logo">
@@ -9,8 +12,9 @@ export default function Header() {
       </div>
       
       <nav>
+        <p className="menu-title">Menu principal</p>
         <ul>
-          <li>
+          <li className={router.pathname == "/" ? "actif" : ""}>
             <Link href="/">
               <a>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -20,7 +24,7 @@ export default function Header() {
               </a>
             </Link>
           </li>
-          <li>
+          <li className={router.pathname == "/about" ? "actif" : ""}>
             <Link href="/about">
               <a>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -34,6 +38,7 @@ export default function Header() {
       </nav>
 
       <nav>
+        <p className="menu-title">Menu secondaire</p>
         <ul>
           <li>
             <Link href="/about">

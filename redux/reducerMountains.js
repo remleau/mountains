@@ -46,9 +46,9 @@ const reducerMountains = (state = initialState, action) => {
       return state
 
     case 'get_by_id/mountains':
-      const acceptedValues = [parseInt(action.payload.mid)];
+      const idMountain = [parseInt(action.payload.mid)];
       const single_mountain = Object.keys(state.mountains).reduce(function (r, e) {
-        if (acceptedValues.includes(state.mountains[e].id)) r[e] = state.mountains[e]
+        if (idMountain.includes(state.mountains[e].id)) r[e] = state.mountains[e]
         return r
       }, {});
 
@@ -69,6 +69,21 @@ const reducerMountains = (state = initialState, action) => {
         /* errors: {
           error: 'Can\'t publish shitty garbage mountain'
         } */
+      }
+
+    case 'search/mountains':
+      if (action.payload.term){
+        const filtered_mountains = Object.keys(initialState.mountains).reduce(function (r, e) {
+          if (initialState.mountains[e].title.includes(action.payload.term)) r[e] = initialState.mountains[e]
+          return r
+        }, {});
+        
+        return {
+          ...state,
+          mountains: filtered_mountains
+        }
+      }else {
+        return initialState;
       }
 
     default:

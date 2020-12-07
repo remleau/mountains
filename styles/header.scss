@@ -1,23 +1,24 @@
 header {
   @apply w-1/5 h-full fixed;
-  @apply bg-lighterGrey;
-  @apply border-r border-yellow;
+  @apply bg-white;
+  @apply border-r border-mediumGrey border-opacity-25;
+
+  .menu-title {
+    @apply px-8 mb-2;
+    @apply text-mediumGrey;
+  }
 
   nav {
-    @apply p-8;
-    @apply border-b border-yellow;
-
-    &:last-child {
-      @apply border-b-0;
-    }
+    @apply py-6;
 
     li {
-      @apply mb-2;
+      @apply px-8;
+      @apply relative mb-2;
 
       a {
         @apply flex items-center rounded-md;
-        @apply p-4;
         @apply text-mediumGrey;
+        @apply py-2;
         
         span {
           line-height: 0.9em;
@@ -30,12 +31,29 @@ header {
         
         @media (hover: hover) {
           &:hover {
-            @apply text-white bg-blue shadow;
+            @apply text-blue;
 
             svg {
-              stroke: white;
+              stroke: theme('colors.blue');
             }
           }
+        }
+      }
+
+      &:before {
+        @apply absolute left-0 top-0;
+        content: '';
+        width: 4px;
+        height: 100%;
+      }
+
+      &.actif {
+        a {
+          @apply text-blue;
+        }
+
+        &:before {
+          @apply bg-blue;
         }
       }
 
@@ -47,20 +65,19 @@ header {
 }
 
 .logo {
-  @apply bg-yellow;
-  @apply px-12 py-6;
-  @apply flex items-center justify-center;
+  @apply px-8 py-6;
+  @apply flex items-center justify-start;
   height: 85px;
 
   h1 {
-    @apply text-2xl font-sans text-lightGrey;
+    @apply text-2xl font-sans text-darkGrey;
   }
 }
 
 .sub-header {
   @apply py-6 px-12;
-  @apply bg-lighterGrey border-b border-yellow;
   @apply flex items-center justify-between;
+  @apply border-b border-mediumGrey border-opacity-25;
   height: 85px;
 
   .title {

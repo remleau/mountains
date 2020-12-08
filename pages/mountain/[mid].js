@@ -34,8 +34,6 @@ const SingleMoutain = ({ t }) => {
     });
   }, [dispatch]);
   
-  console.log(mountains, isFetching)
-
   return (
     <Layout meta={meta}>
       {

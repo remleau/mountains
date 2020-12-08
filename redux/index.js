@@ -1,11 +1,17 @@
-import { combineReducers, createStore } from "redux";
-import reducerMountains from './reducerMountains.js';
+import { combineReducers, createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+
+import { reducerMountains } from './reducerMountains.js';
+import { reducerUsers } from './reducerUsers.js';
+
 
 const initStore = (initialState, options) => {
   const store = createStore(
     combineReducers({
-      mountains: reducerMountains
-    })
+      users: reducerUsers,
+      mountains: reducerMountains,
+    }),
+    applyMiddleware(thunk)
   )
 
   return store;

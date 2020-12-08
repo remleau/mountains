@@ -1,9 +1,13 @@
 .search-bar {
+  @apply relative outline-none;
   @apply flex items-end;
-  @apply outline-none;
+  
+  .content-input {
+    @apply relative;
+  }
 
   input {
-    @apply mr-4 pr-2 py-2;
+    @apply pr-2 py-2;
     @apply bg-transparent;
     @apply border-b border-mediumGrey outline-none;
     width: 225px;
@@ -14,10 +18,17 @@
   }
 
   button {
-    @apply outline-none py-3 px-3;
+    @apply outline-none py-3 px-3 ml-4;
 
     svg {
       width: 17px;
     }
+  }
+
+  .content-search {
+    @apply p-4;
+    @apply z-10 w-full absolute;
+    @apply bg-white shadow;
+    top: 100%;
   }
 }

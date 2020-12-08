@@ -28,13 +28,6 @@ const useMountain = () => {
 
 const FormAddMountain = (props) => {
   const { add, mountains, errors } = useMountain();
-  
-  useEffect(() => {
-    // Close pop up si pas erreurs
-    if (Object.keys(errors).length == 0) {
-      props.popUpVisibility(!props.popUpVisibility);
-    }
-  }, [mountains, errors]);
 
   return (
     <section className="block__form-addMountain">

@@ -40,7 +40,7 @@ const initialState = {
   errors: {}
 }
 
-const reducerMountains = (state = initialState, action) => {
+export const reducerMountains = (state = initialState, action) => {
   switch (action.type) {
     case 'get/mountains':
       return state
@@ -67,23 +67,8 @@ const reducerMountains = (state = initialState, action) => {
         ...state,
         mountains: newState,
         /* errors: {
-          error: 'Can\'t publish shitty garbage mountain'
+          error: 'Can\'t publish mountain'
         } */
-      }
-
-    case 'search/mountains':
-      if (action.payload.term){
-        const filtered_mountains = Object.keys(initialState.mountains).reduce(function (r, e) {
-          if (initialState.mountains[e].title.includes(action.payload.term)) r[e] = initialState.mountains[e]
-          return r
-        }, {});
-        
-        return {
-          ...state,
-          mountains: filtered_mountains
-        }
-      }else {
-        return initialState;
       }
 
     default:
@@ -91,5 +76,3 @@ const reducerMountains = (state = initialState, action) => {
 
   }
 }
-
-export default reducerMountains;

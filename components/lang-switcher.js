@@ -20,7 +20,7 @@ const Switcher = ({ t }) => (
 )
 
 Switcher.getInitialProps = async () => ({
-  namespacesRequired: ['common'],
+  namespacesRequired: ['common']
 });
 
 export default withTranslation('common')(Switcher)

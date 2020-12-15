@@ -8,13 +8,15 @@ function Layout({ children, meta, t}) {
   const default_meta = {
     title: t('page_title'),
     description: t('page_description'),
-    component: ''
+    component: '',
+    wrapperClass: ''
   }
 
   const {
     title,
     description,
-    component
+    component,
+    wrapperClass
   } = {...default_meta, ...meta};
 
   return (
@@ -30,7 +32,7 @@ function Layout({ children, meta, t}) {
       
       <div className="wrapper">
         {component}
-        <div className="sub-wrapper">
+        <div className={"sub-wrapper " + wrapperClass}>
           {children}
         </div>
         <Footer />

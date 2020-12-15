@@ -65,10 +65,7 @@ export const reducerMountains = (state = initialState, action) => {
 
       return {
         ...state,
-        mountains: newState,
-        /* errors: {
-          error: 'Can\'t publish mountain'
-        } */
+        mountains: newState
       }
 
     default:

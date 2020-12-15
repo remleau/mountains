@@ -1,6 +1,6 @@
 const initialState = {
   userInfo: [],
-  isLoggedIn: false,
+  isLoggedIn: true,
 }
 
 export const reducerUsers = (state = initialState, action) => {
@@ -11,6 +11,22 @@ export const reducerUsers = (state = initialState, action) => {
         isLoggedIn: true
       }
 
+    case 'logout/user':
+      return {
+        ...state,
+        isLoggedIn: false
+      }
+
+    case 'test/user':
+      return {
+        ...state,
+        userInfo: [
+          {
+            'email': 'allo@gmail.com'
+          }
+        ]
+      }
+
     default:
       return state
 
@@ -18,9 +34,14 @@ export const reducerUsers = (state = initialState, action) => {
 }
 
 export const isLogged = () => async (dispatch, getState) => {
-  const user = getState().users;
 
-  console.log(user);
+  console.log('check user on refresh')
+
+  // dispatch({
+  //   type: 'get/user'
+  // })
+
+  const user = getState().users;
 
   return user.isLoggedIn;
 }
@@ -31,6 +52,17 @@ export const logMeIn = () => async (dispatch, getState) => {
     type: 'get/user'
   })
   
+  const user = getState().users;
+
+  return user.isLoggedIn;
+}
+
+export const logMeOut = () => async (dispatch, getState) => {
+
+  dispatch({
+    type: 'logout/user'
+  })
+
   const user = getState().users;
 
   return user.isLoggedIn;

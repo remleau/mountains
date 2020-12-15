@@ -10,6 +10,7 @@
 @import './toggleViews.scss';
 @import './modal.scss';
 @import './errors.scss';
+@import './singles.scss';
 
 @tailwind utilities;
 
@@ -57,6 +58,16 @@
     svg {
       width: 20px;
     }
+  }
+}
+
+.logout {
+  @apply w-full absolute;
+  bottom: 0;
+
+  button {
+    @apply outline-none text-white text-sm bg-blue;
+    @apply px-8 py-3 w-full;
   }
 }
 

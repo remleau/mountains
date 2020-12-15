@@ -1,18 +1,39 @@
 import '../styles/index.scss';
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
+
 import { Provider } from 'react-redux'
-import initStore from '../redux';
-import withRedux from "next-redux-wrapper";
-import React from 'react';
-import { appWithTranslation } from '../i18n';
+import { useStore } from '../redux';
+import { isLogged } from '../redux/reducerUsers.js';
+
+import { i18n, appWithTranslation } from '../i18n';
 
 
 const MyApp = ({ Component, pageProps }) => {
+  const router = useRouter();
+  const store = useStore(pageProps.initialReduxState);
 
-    return (
-      <Provider store={initStore()}>
-        <Component {...pageProps} />
-      </Provider>
-    );
+  useEffect(() => {
+    store.dispatch(isLogged()).then((result) => {
+      if (result == true) {
+        if(router.pathname == '/login'){
+          router.push(i18n.language + '/');
+        } else {
+          router.push(router.asPath);
+        }
+      }
+
+      if (result == false) {
+        router.push(i18n.language + '/login');
+      }
+    })
+  }, [])
+
+  return (
+    <Provider store={store}>
+      <Component {...pageProps} />
+    </Provider>
+  );
 }
 
-export default withRedux(initStore)(appWithTranslation(MyApp));
+export default appWithTranslation(MyApp);

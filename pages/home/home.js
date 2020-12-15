@@ -1,5 +1,5 @@
 // important stuff
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 
 // traduction
 import { withTranslation } from '../../i18n';
@@ -13,7 +13,7 @@ import FormAddMountain from '../../components/formAddMountain.js';
 
 // page component
 const Home = ({ t }) => {
-  const [modalAdd, setModalAdd] = useState(false);
+  const refAddModal = useRef();
 
   const meta = {
     title: t('page_title'),
@@ -24,13 +24,13 @@ const Home = ({ t }) => {
   return (
     <Layout meta={meta}>
 
-      <Modal visibility={modalAdd} controlVisibility={setModalAdd} title="Ajouter une montagne">
+      <Modal ref={refAddModal} title="Ajouter une montagne">
         <FormAddMountain />
       </Modal>
 
       <div className="title">
         <h1>Mes montagnes</h1>
-        <button className="cta add" onClick={() => setModalAdd(true)}>
+        <button className="cta add" onClick={() => refAddModal.current.openModal()}>
           <span>Ajouter</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />

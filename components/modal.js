@@ -1,14 +1,26 @@
-import React from "react";
+import React, { useState, forwardRef, useImperativeHandle } from "react";
 
-const Modal = (props) => {
+const Modal = forwardRef((props, ref) => {
   const { title } = props;
+  const [display, setDisplay] = useState(false);
 
-  const setModalVisibility = () => {
-    return props.controlVisibility(!props.visibility);
+  useImperativeHandle(ref, () => {
+    return {
+      openModal: () => open(),
+      closeModal: () => close(),
+    }
+  });
+
+  const open = () => {
+    setDisplay(true)
+  }
+
+  const close = () => {
+    setDisplay(false);
   }
 
   return (
-    <section className={"block__modal " + (props.visibility ? 'block' : 'hidden')}>
+    <section ref={ref} className={"block__modal " + (display ? 'block' : 'hidden')}>
 
       <div className="flex items-center justify-between pb-4">
 
@@ -18,7 +30,7 @@ const Modal = (props) => {
           </div>
         : ''}
 
-        <button onClick={() => setModalVisibility()} className="cta close">
+        <button onClick={() => setDisplay(false)} className="cta close">
           <span>Fermer</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -31,6 +43,6 @@ const Modal = (props) => {
 
     </section>
   );
-}
+});
 
 export default Modal;

@@ -1,0 +1,16 @@
+.singles {
+
+  .hero {
+    @apply -my-6 -mx-12;
+    @apply py-6 px-12;
+    @apply flex items-center justify-center;
+
+    min-height: 350px;
+    background-size: cover;
+    background-position: center;
+
+    h1 {
+      @apply text-white;
+    }
+  }
+}

@@ -2,6 +2,8 @@ import { Link } from '../i18n';
 import Switcher from './lang-switcher';
 import { useRouter } from 'next/router';
 
+import Logout from './logout';
+
 export default function Header() {
   const router = useRouter();
 
@@ -53,6 +55,11 @@ export default function Header() {
         </ul>
         <Switcher />
       </nav>
+
+      <div>
+        <Logout />
+      </div>
+
     </header>
   )
 }

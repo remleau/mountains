@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { useSelector } from 'react-redux';
+import { Link } from '../i18n';
 
 const useSearch = (term) => {
   const { mountains } = useSelector((state) => state.mountains);
@@ -47,7 +48,11 @@ const Search = () => {
           Object.keys(results).length ? 
             <div className="content-search">
               {Object.keys(results).map(function (key) {
-                return <p>{results[key].title}</p>
+                return (
+                  <Link href={results[key].link}>
+                    <p key={key}>{results[key].title}</p>
+                  </Link>
+                )
               })}
             </div>  
           : ''

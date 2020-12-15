@@ -3,5 +3,6 @@
   "page_description": "This is en description",
   "change_locale": "Language",
   "locale_fr": "French",
-  "locale_en": "English"
+  "locale_en": "English",
+  "logout": "Logout"
 }

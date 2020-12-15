@@ -3,7 +3,6 @@ import { logMeIn } from '../../redux/reducerUsers.js';
 
 import { withTranslation } from '../../i18n';
 
-
 const Login = ({ t }) => {
   const dispatch = useDispatch();
 
@@ -22,4 +21,4 @@ Login.getInitialProps = async () => ({
   namespacesRequired: ['common', 'footer'],
 });
 
-export default withTranslation('about')(Login)
+export default withTranslation('about')(Login);
